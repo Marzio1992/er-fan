@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrarse - Airbag Fanáticos</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body class="fondo">
+
+  <div class="contenedor-login">
+    <h1 class="titulo-neon">Registro</h1>
+    <form id="form-registro">
+      <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+      <input type="password" id="clave" placeholder="Contraseña" required>
+      <button type="submit">Registrarse</button>
+    </form>
+    <p>¿Ya tenés cuenta? <a href="login.html">Iniciar sesión</a></p>
+  </div>
+
+  <script>
+    document.getElementById('form-registro').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const usuario = document.getElementById('usuario').value;
+      localStorage.setItem('usuario', usuario);
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

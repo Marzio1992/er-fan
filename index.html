@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIRBAG FANÁTICOS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="registro-acceso">
+  <a href="registro.html" class="btn-registro">Registrarse</a>
+</div>
+
+
+</head>
+<body>
+ <script>
+  const usuario = localStorage.getItem('usuario');
+  if (!usuario) {
+    window.location.href = 'login.html';
+  }
+</script>
+
+  <div class="fondo">
+    
+  </div>
+
+  <header>
+    <nav>
+      <a href="#presentaciones">Presentaciones</a>
+      <a href="#fanaticos">Fanáticos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <h1 class="titulo-neon">AIRBAG FANÁTICOS</h1>
+  </header>
+  
+    <section class="bienvenida">
+      <h2>¡Bienvenidos al sitio oficial de Airbag!</h2>
+      <p>Enterate de nuestras próximas fechas y novedades.</p>
+    </section>
+
+  <main>
+    <section id="muro" class="muro">
+  <h2>📢 Publicaciones de los fanáticos</h2>
+  <form id="form-publicacion">
+    <textarea id="texto-publicacion" placeholder="Escribí algo..." required></textarea>
+    <button type="submit">Publicar</button>
+  </form>
+  <div id="publicaciones"></div>
+</section>
+
+
+
+<!-- MURO DE PUBLICACIONES -->
+<section id="muro-section" style="display:none;">
+  <h2>📢 Muro de publicaciones</h2>
+  <form id="form-publicacion">
+    <textarea id="texto-publicacion" placeholder="¿Qué estás pensando?" required></textarea>
+    <button type="submit">Publicar</button>
+  </form>
+  <div id="publicaciones"></div>
+</section>
+
+
+    <section id="presentaciones">
+      <h2>Próximas presentaciones</h2>
+      <ul>
+        <li><strong>16 de julio</strong> - 
+          <a href="https://www.antelarena.com.uy/events/detail/airbag-2025" target="_blank">Antel Arena (conseguí tu entrada)</a>
+        </li>
+        <li><strong>12 de septiembre</strong> - Teatro de Verano</li>
+        <li><strong>3 de octubre</strong> - Córdoba, Argentina</li>
+      </ul>
+    </section>
+
+    <section id="fanaticos" class="fanaticos">
+      <h2>Nuestros Fanáticos</h2>
+      <div class="carrusel">
+        <div class="slide visible">
+          <img src="nop.png" alt="Fanático 1">
+          <p>"¡Airbag me cambió la vida!"</p>
+        </div>
+        <div class="slide">
+          <img src="oteka.png" alt="Fanático 2">
+          <p>"No me pierdo ni un show"</p>
+        </div>
+        <div class="slide">
+          <img src="fotooo.png" alt="Fanático 3">
+          <p>"¡La mejor banda de todas!"</p>
+        </div>
+        <button class="anterior">&#10094;</button>
+        <button class="siguiente">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="temas">
+      <h2>🎸 Estos son los mejores temas de Airbag</h2>
+      <div class="tema">
+        <img src="cef8dbd-airbag.avif" alt="Tema 1">
+        <a href="https://www.youtube.com/watch?v=R1O5QAYEEns" target="_blank">Ver “CAMPOS ELISEOS” en YouTube</a>
+      </div>
+      <div class="tema">
+        <img src="descarga (1).jpeg" alt="Tema 2">
+        <a href="https://www.youtube.com/watch?v=JJxN0r2MCLs" target="_blank">Ver “AL PARECER TODO AH SIDO UNA TRAMPA” en YouTube</a>
+      </div>
+      <div class="tema">
+        <img src="arianos.jpeg" alt="Tema 3">
+        <a href="https://www.youtube.com/watch?v=XXX" target="_blank">Ver “COLOMBIANA” en YouTube</a>
+      </div>
+    </section>
+
+    <section class="spotify">
+  <h2>🎵 Escuchá nuestra playlist</h2>
+  <p>ACA PODES ESCUCHAR AIRBAG Y MÁS ROCK EN SPOTIFY</p>
+</section>
+
+
+    <div class="spotify-container">
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/1qvoxkbkPKT0b0kCm8LzSN?utm_source=generator" 
+        width="100%" 
+        height="152" 
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+   <section class="show">
+      <h2>SHOW DEL AÑO PASADO EN ANTEL ARENA</h2>
+      <H2>VIVAMOS EL MOMENTO</H2>
+   </section>
+
+    <div class="video-container">
+      <video controls>
+        <source src="IMG_0149.MP4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+
+   <section class="show">
+      <h2>APOCALIPSIS CONFORT</h2>
+   </section>
+
+    <div class="video-container">
+      <video controls>
+        <source src="IMG_0152.MP4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Para contrataciones y prensa: <a href="mailto:contacto@airbag.com">contacto@airbag.com</a></p>
+    </section>
+  </main>
+  <script>
+  const formulario = document.getElementById('form-publicacion');
+  const textarea = document.getElementById('texto-publicacion');
+  const publicaciones = document.getElementById('publicaciones');
+
+  formulario.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const texto = textarea.value.trim();
+    if (texto === '') return;
+
+    const nuevaPublicacion = document.createElement('div');
+    nuevaPublicacion.classList.add('publicacion');
+    nuevaPublicacion.textContent = texto;
+
+    publicaciones.prepend(nuevaPublicacion);
+    textarea.value = '';
+  });
+</script>
+
+
+  <footer>
+    <p>&copy; 2025 Airbag Banda - Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    document.querySelector('.siguiente').addEventListener('click', () => {
+      slides[index].classList.remove('visible');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('visible');
+    });
+
+    document.querySelector('.anterior').addEventListener('click', () => {
+      slides[index].classList.remove('visible');
+      index = (index - 1 + slides.length) % slides.length;
+      slides[index].classList.add('visible');
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
